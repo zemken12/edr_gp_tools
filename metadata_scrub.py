@@ -18,13 +18,13 @@ metadata = md.MetadataEditor(scrub_list)  #supports shp, fc, RasterDatasets and 
 metadata = md.MetadataEditor(metadata_file="path/to/metadata_file.xml")
 
 # Get text items (returns string)
-description = metadata.description
-summary = metadata.summary
+description = metadata.abstract
+summary = metadata.purpose
 
 # Change text items
-metadata.title = "The new title"
+metadata.abstract = "The new title"
 metadata.purpose = "This is the abstract"
-metadata.summary = ""
+metadata.abstract = ""
 metadata.purpose = ""
 
 metadata.finish()  # save() and cleanup() as one call
